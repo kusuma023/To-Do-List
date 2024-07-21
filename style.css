@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+body{
+    background-image: linear-gradient(to right,blue,red);
+}
+.todo-app{
+    background-color: #fff;
+    width: 35%;
+    margin: 100px auto 20px;
+    border-radius: 10px;
+    padding: 40px 30px 70px;
+}
+.todo-app h1{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.todo-app h1 .icon{
+    height: 17px;
+    width: 20px;
+    margin-left: 10px;
+}
+.task-field{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #edeef0;
+    padding-left: 20px;
+    border-radius: 30px;
+}
+.task-field #task-bar{
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 14px;
+    width:100%;
+}
+.task-field .add-btn{
+    outline: none;
+    border: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+.task{
+    display: flex;
+}
+#task-list>div{
+    padding: 5px 10px;
+}
+.task div{
+    padding: 5px;
+}
+#task-list .checked img{
+    height: 20px;
+    width: 20px;
+}
+#task-list .remove img{
+    height: 9px;
+    width: 9px;
+}
+#task-list .content{
+    width: 100%;
+    font-size: 18px;
+    word-break: break-word;
+}
+
+/*----Responsive Design-----*/
+@media only screen and (max-width:900px){
+    .todo-app{
+        width: 50%;
+    }
+    .task-field .add-btn {
+        padding: 12px 25px;
+    }
+    @media(max-width:550px){
+        .todo-app h1 {
+            font-size: 14px;
+        }
+        .todo-app{
+            width: 70%;
+        }
+        .task-field{
+            padding-left: 0px;
+        }
+        .task-field .add-btn {
+            padding: 10px 12px;
+            font-size: 14px;
+        }
+        #task-list .content {
+            font-size: 14px;
+        }
+    }
+}
